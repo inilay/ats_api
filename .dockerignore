@@ -1,0 +1,9 @@
+.git
+.gitignore
+.dockerignore
+
+db.sqlite3
+Dockerfile
+
+venv/
+__pycache__/
