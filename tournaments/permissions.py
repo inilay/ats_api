@@ -1,5 +1,6 @@
 from rest_framework import permissions
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+
+from .models import AnonymousBracket
 
 
 class IsTournamenOwnerOrReadOnly(permissions.BasePermission):
@@ -9,16 +10,11 @@ class IsTournamenOwnerOrReadOnly(permissions.BasePermission):
     """
 
     def has_permission(self, request, view):
-        """
-        Return `True` if permission is granted, `False` otherwise.
-        """
-        print("I!")
-        return True
+        return bool(request.user and request.user.is_authenticated)
 
     def has_object_permission(self, request, view, obj):
         # Read permissions are allowed to any request,
         # so we'll always allow GET, HEAD or OPTIONS requests.
-        print('work perm')
         if request.method in permissions.SAFE_METHODS:
             return True
 
@@ -27,17 +23,31 @@ class IsTournamenOwnerOrReadOnly(permissions.BasePermission):
 
 
 class IsBracketOwnerOrReadOnly(permissions.BasePermission):
-     def has_object_permission(self, request, view, obj):
+    def has_permission(self, request, view):
+        return bool(request.user and request.user.is_authenticated)
+
+    def has_object_permission(self, request, view, obj):
         # Read permissions are allowed to any request,
         # so we'll always allow GET, HEAD or OPTIONS requests.
-        
+
         if request.method in permissions.SAFE_METHODS:
             return True
-    
+
         return obj.tournament.owner.user == request.user
 
 
-class AuthMixin:
-    
-    def dasd(self,):
-        print('asfdaf')
+class IsTournamentModeratorOrOwner(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return bool(request.user and request.user.is_authenticated)
+
+    def has_object_permission(self, request, view, obj):
+        if request.user.id == obj.tournament.owner_id or obj.tournament.moderators.filter(id=request.user.id).exists():
+            return True
+        return False
+
+
+class IsAnonymousBracket(permissions.BasePermission):
+    def has_object_permission(self, request, view, obj):
+        if AnonymousBracket.objects.filter(bracket=obj).exists():
+            return True
+        return False

@@ -1,0 +1,510 @@
+<mxfile host="65bd71144e">
+    <diagram id="QNUfoh6ZNc9PJR1LSjWQ" name="Page-1">
+        <mxGraphModel dx="1118" dy="717" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=11;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Начало&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="305.99" y="160" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;hachureGap=4;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="3" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="p_cnt = len(participant)&#10;remaining_p_cnt = p_cnt&#10;number_of_rounds = 1&#10;multiplicity_factor = p_in_m / next_round_p" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="249.99" y="210" width="230" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="5" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Times New Roman;fontSize=12;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="5" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="506.87" y="385" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="530" y="355"/>
+                            <mxPoint x="530" y="515"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="&amp;nbsp;remaining_p_cnt &amp;gt; p_in_m:" style="rhombus;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="246.55" y="310" width="236.88" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="8" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="190" y="450"/>
+                            <mxPoint x="190" y="355"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="&lt;div&gt;number_of_rounds = number_of_rounds + 1&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; remaining_p_cnt = remaining_p_cnt / multiplicity_factor&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="209.99" y="420" width="310" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="17" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="rounds = []" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="305.99" y="500" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="25" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="210" y="690"/>
+                            <mxPoint x="210" y="640"/>
+                            <mxPoint x="210" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="round =&amp;nbsp; Round(serial_number=number)&lt;br&gt;rounds.append(round)" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="239.99" y="660" width="249.99" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Конец&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="304.99" y="730" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="32" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="32" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="530" y="590"/>
+                            <mxPoint x="530" y="745"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="32" value="number от number_of_rounds-1 до -1" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="269.99" y="550" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="41" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Начало&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="777" y="179" width="120" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;hachureGap=4;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="42" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=none;hachureGap=4;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" parent="1" source="42" target="78" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&amp;nbsp;r от 0 до&amp;nbsp; number_of_rounds" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="991.25" y="242" width="137.5" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="44" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="match_serial_number_cnt = number_of_match_in_round" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="328" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="46" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="46" target="75" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1400" y="420"/>
+                            <mxPoint x="1400" y="875"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="&lt;font&gt;&amp;nbsp;m от 0 до&amp;nbsp; number_of_match_in_round&lt;/font&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="957.5" y="380" width="207.5" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="47" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="match = Match(round=rounds[r], serial_number=match_serial_number_cnt)&#10;unsaved_matches.append(match)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="480" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="50" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="number_of_match_in_round = 1&lt;br&gt;unsaved_matches = []&lt;br&gt;matches_info=[]" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="952" y="178" width="210" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="53" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="905" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="53" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1215" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="r == number_of_rounds - 1" style="rhombus;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="942.81" y="560" width="237.19" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="55" target="71" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1060" y="648"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="p от 0 до p_in_m" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="608" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="58" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="738" y="726"/>
+                            <mxPoint x="738" y="648"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="info = MatchInfo(match=match, participant=participants[m * p_in_m + p])&#10;matches_info.append(info)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="696" width="260" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="64" target="71" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1386" y="648"/>
+                            <mxPoint x="1386" y="805"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="p от 0 до p_in_m" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1140" y="608" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="68" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1074" y="735"/>
+                            <mxPoint x="1071" y="648"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="info = MatchInfo(match=match, participant=&quot;---&quot;)&#10;matches_info.append(info)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="710" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="71" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="734" y="805"/>
+                            <mxPoint x="731" y="611"/>
+                            <mxPoint x="731" y="420"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="71" value="match_serial_number_cnt = match_serial_number_cnt - 1" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="904.2999999999998" y="780" width="311.4" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;fontFamily=Times New Roman;fontSize=12;" parent="1" source="75" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="720" y="875"/>
+                            <mxPoint x="720" y="277"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="75" value="number_of_match_in_round = number_of_match_in_round * (p_in_m // next_round_p)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="833.5500000000001" y="850" width="464.3" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Конец&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1274" y="247" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="888" y="560" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="560" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=none;html=1;strokeColor=#000000;" parent="1" source="87" target="88" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Начало&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1819" y="271" width="128.4" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="88" target="102" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="match_serial_number_cnt = 0&lt;br&gt;number_of_match_in_round = math.ceil(participants_cnt / p_in_m)&lt;br&gt;unsaved_matches = []&lt;br&gt;matches_info=[]" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1703.9499999999998" y="334" width="354.9" height="63" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="102" target="104" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" parent="1" source="102" target="151" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&amp;nbsp;r от 0 до&amp;nbsp; number_of_rounds" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1812.65" y="410" width="137.5" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="104" target="130" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="_round = Round(bracket=bracket, serial_number=i)&#10;        rounds.append(_round)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1731.4" y="497" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="130" target="132" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" parent="1" source="130" target="102" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2056" y="618"/>
+                            <mxPoint x="2056" y="564"/>
+                            <mxPoint x="1677" y="566"/>
+                            <mxPoint x="1677" y="445"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="130" value="&lt;font&gt;&amp;nbsp;m от 0 до&amp;nbsp; number_of_match_in_round&lt;/font&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1780.5500000000002" y="580" width="207.5" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="132" target="135" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="match = Match(round=rounds[r], serial_number=match_serial_number_cnt)&#10;unsaved_matches.append(match)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1732.9" y="674" width="300" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="135" target="137" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1727.9" y="784"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="134" style="edgeStyle=none;hachureGap=4;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="135" target="141" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2037.9" y="784"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="135" value="r == number_of_rounds - 1" style="rhombus;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1765.71" y="754" width="237.19" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="137" target="145" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1882.9" y="842"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="137" value="p от 0 до p_in_m" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1652.9" y="802" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="139" target="137" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1560.9" y="920"/>
+                            <mxPoint x="1560.9" y="842"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="139" value="info = MatchInfo(match=match, participant=participants[m * p_in_m + p])&#10;matches_info.append(info)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1582.9" y="890" width="260" height="59" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" style="edgeStyle=none;hachureGap=4;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="141" target="145" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2208.9000000000005" y="842"/>
+                            <mxPoint x="2208.9000000000005" y="999"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="141" value="p от 0 до p_in_m" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1962.9" y="802" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="143" target="141" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1896.9" y="929"/>
+                            <mxPoint x="1893.9" y="842"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="143" value="info = MatchInfo(match=match, participant=&quot;---&quot;)&#10;matches_info.append(info)" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1922.9" y="904" width="260" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" source="145" target="130" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1556.9" y="999"/>
+                            <mxPoint x="1553.9" y="805"/>
+                            <mxPoint x="1557" y="617"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="145" value="match_serial_number_cnt = match_serial_number_cnt - 1" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1727.1999999999998" y="974" width="311.4" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1710.9" y="754" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2002.9" y="754" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Конец&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2035" y="415" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="199" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="153" target="154">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Начало&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2464" y="387" width="82" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="154" target="160">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="&amp;nbsp; &amp;nbsp; participants_cnt = len(participants)&lt;br&gt;&amp;nbsp;rounds = [] &lt;br&gt;unsaved_matches = [] &lt;br&gt;matches_info = []&lt;br&gt;&amp;nbsp;permutations = list(range(participants_cnt)) &lt;br&gt;mid = participants_cnt // 2 &lt;br&gt;match_serial_number_cnt = 0" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2571.49" y="369" width="233" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" style="edgeStyle=none;hachureGap=4;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" edge="1" parent="1" source="156" target="160">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2526" y="601"/>
+                            <mxPoint x="2526" y="524"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="156" value="round =&amp;nbsp; Round(serial_number=number)&lt;br&gt;rounds.append(round)" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2563" y="580" width="249.99" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" style="edgeStyle=none;hachureGap=4;html=1;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" edge="1" parent="1" source="160" target="156">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="160" target="163">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2824" y="525"/>
+                            <mxPoint x="2824" y="622"/>
+                            <mxPoint x="2678" y="622"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="160" value="number от 0 до&amp;nbsp;&amp;nbsp;participants_cnt-1" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2591" y="485" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" style="edgeStyle=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="163" target="165">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="198" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="163" target="197">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="i от 0 до number_of_rounds" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2584" y="636" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="165" target="169">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="l1 = permutations[:mid]&lt;br&gt;l2 = permutations[mid:] &lt;br&gt;l2.reverse()" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2560.75" y="730" width="236.5" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" style="edgeStyle=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="169" target="171">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="169" target="193">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2911" y="836"/>
+                            <mxPoint x="2913" y="1161"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="169" value="j от start до mid" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.octagon2;align=center;verticalAlign=middle;dx=15;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2584" y="796" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="171" target="178">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" value="match = Match(round=r, serial_number=match_serial_number_cnt) &lt;br&gt;unsaved_matches.append(match)" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2511" y="889" width="345" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="182" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="178" target="180">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="183" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="178" target="181">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="j == 0 and i % 2 == 1" style="rhombus;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2564.9" y="964" width="237.19" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.176;entryY=0.003;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="180" target="186">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="t2 = participants[l1[j]] &#10;t1 = participants[l2[j]]" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2486" y="1027" width="156" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="191" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.811;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="181" target="186">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="t1 = participants[l1[j]] &#10;t2 = participants[l2[j]]" style="rounded=0;whiteSpace=wrap;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;align=center;spacing=1;horizontal=1;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2723" y="1027" width="159" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" value="True" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2503" y="994" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="False" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2805.0000000000005" y="994" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="186" target="169">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2475" y="1101"/>
+                            <mxPoint x="2475" y="836"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="186" value="matches_info.append(MatchParticipantInfo(match=match, participant=t1))&lt;br&gt;matches_info.append(MatchParticipantInfo(match=match, participant=t2)) match_serial_number_cnt = match_serial_number_cnt + 1" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2497.5" y="1074" width="377" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="193" target="163">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2470" y="1157"/>
+                            <mxPoint x="2467" y="676"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="193" value="permutations = permutations[mid:-1] + permutations[:mid] + permutations[-1:]" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Times New Roman;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2492" y="1141" width="396" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="197" value="&lt;p style=&quot;font-size: 12px;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 12px;&quot;&gt;Конец&lt;/font&gt;&lt;/p&gt;" style="ellipse;whiteSpace=wrap;html=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fillColor=none;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="2812.99" y="648.5" width="104" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="&lt;font color=&quot;#000000&quot;&gt;NGINX&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="3382" y="731" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="202" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;fontColor=#000000;" edge="1" parent="1" source="201" target="200">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="201" value="&lt;font color=&quot;#000000&quot;&gt;Собраный Frontend&lt;br&gt;(HTML, CSS, JS)&lt;br&gt;Статические файлы&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="3375.5" y="823" width="133" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="205" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontColor=#000000;startArrow=classic;startFill=1;" edge="1" parent="1" source="204" target="200">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="&lt;font color=&quot;#000000&quot;&gt;Gunicorn&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="3561" y="730" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="207" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontColor=#000000;startArrow=classic;startFill=1;" edge="1" parent="1" source="206" target="204">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="206" value="&lt;font color=&quot;#000000&quot;&gt;Django&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="3740" y="730" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="210" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;fontColor=#000000;startArrow=classic;startFill=1;" edge="1" parent="1" source="209" target="206">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" value="&lt;font color=&quot;#000000&quot;&gt;PostgreSQL&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="3740" y="826" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;fontColor=#000000;startArrow=classic;startFill=1;" edge="1" parent="1" source="211" target="200">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" value="Клиент" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fontColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="3195" y="721" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

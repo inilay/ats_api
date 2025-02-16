@@ -1,6 +1,4 @@
-from django import forms
 from django.contrib import admin
-from django.utils.safestring import mark_safe
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
 
@@ -48,9 +46,7 @@ class CustomUserAdmin(UserAdmin):
 
     add_form = UserRegisterForm
 
-    inlines = (ProfileAdmin, )
-
-
+    inlines = (ProfileAdmin,)
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
