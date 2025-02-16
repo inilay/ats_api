@@ -27,7 +27,7 @@ SECRET_KEY = f"{os.environ.get('DJANGO_SECRET_KEY')}"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['indioraapi.pythonanywhere.com']
 
 INTERNAL_IPS = [
     # ...
@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt.token_blacklist",
     "corsheaders",
-    "debug_toolbar",
     "tournaments.apps.TournamentsConfig",
     "profiles.apps.ProfilesConfig",
     "errors.apps.ErrorsConfig",
@@ -71,8 +70,7 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",   
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
