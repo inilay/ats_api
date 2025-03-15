@@ -87,8 +87,8 @@ def create_se_bracket(bracket: Bracket, participants: list, settings: SEBracketS
 
     # Создаем раунды O(log(n))
     for number in range(number_of_rounds - 1, -1, -1):
-        rounds.append(Round(bracket=bracket, serial_number=number))
-    Round.objects.bulk_create(rounds)
+        round = Round.objects.create(bracket=bracket, serial_number=number)
+        rounds.append(round)
 
     # Заполняем раунды матчами с последнего по первый O(nlog(n))
     for r in range(number_of_rounds):  # O(log(n))
