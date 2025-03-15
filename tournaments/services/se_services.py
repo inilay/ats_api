@@ -58,8 +58,6 @@ def create_se_bracket(bracket: Bracket, participants: list, settings: SEBracketS
     print("number_of_match_in_round", number_of_match_in_round)
 
     rounds = []
-    unsaved_matches = []
-    matches_info = []
 
     # Не правильно работает дополнение для next_round_p > 1
     # print('participant count', (p_in_m**number_of_rounds) // next_round_p)
@@ -94,31 +92,25 @@ def create_se_bracket(bracket: Bracket, participants: list, settings: SEBracketS
     for r in range(number_of_rounds):  # O(log(n))
         match_serial_number_cnt = number_of_match_in_round
         for m in range(number_of_match_in_round):  # O(n)
-            match = Match(round=rounds[r], serial_number=match_serial_number_cnt, state_id=1)
-            unsaved_matches.append(match)
+            match = Match.objects.create(round=rounds[r], serial_number=match_serial_number_cnt, state_id=1)
             # Для первого
             if r == number_of_rounds - 1:
                 for p in range(p_in_m):
                     print("m*p_in_m+p", m * p_in_m + p)
-                    matches_info.append(
-                        MatchParticipantInfo(
+                    MatchParticipantInfo.objects.create(
                             match=match,
                             participant_score=0,
                             participant=participants[m * p_in_m + p],
                         )
-                    )
             # Для остальных
             else:
                 for _ in range(p_in_m):
-                    matches_info.append(MatchParticipantInfo(match=match, participant_score=0, participant="---"))
+                    MatchParticipantInfo.objects.create(match=match, participant_score=0, participant="---")
             # Уменьшаем серийный номер матча
             match_serial_number_cnt = match_serial_number_cnt - 1
         # Увеличиваем количество матчей раунде
         number_of_match_in_round = number_of_match_in_round * (p_in_m // next_round_p)
         # Сохраняем матчи
-
-    Match.objects.bulk_create(unsaved_matches)
-    MatchParticipantInfo.objects.bulk_create(matches_info)
 
 
 def update_se_bracket(data):

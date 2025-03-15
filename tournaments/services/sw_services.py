@@ -28,10 +28,6 @@ def create_sw_bracket(bracket: Bracket, participants: list, number_of_rounds: in
         for _ in range(p_in_m - (participants_cnt % p_in_m)):
             participants.append("---")
 
-    rounds = []
-    unsaved_matches = []
-    matches_info = []
-
     match_serial_number_cnt = 0
     number_of_match_in_round = math.ceil(participants_cnt / p_in_m)
 
@@ -40,31 +36,23 @@ def create_sw_bracket(bracket: Bracket, participants: list, number_of_rounds: in
 
     # O(log(n))
     for i in range(number_of_rounds):
-        _round = Round(bracket=bracket, serial_number=i)
-        rounds.append(_round)
+        _round = Round.objects.creeate(bracket=bracket, serial_number=i)
         # O(n / 2)
         for m in range(number_of_match_in_round):
-            match = Match(round=_round, serial_number=match_serial_number_cnt, state_id=1)
-            unsaved_matches.append(match)
+            match = Match.objects.create(round=_round, serial_number=match_serial_number_cnt, state_id=1)
             if i == 0:
                 for p in range(p_in_m):
                     print("m*p_in_m+p", m * p_in_m + p)
-                    matches_info.append(
-                        MatchParticipantInfo(
+                    MatchParticipantInfo.objects.create(
                             match=match,
                             participant_score=0,
                             participant=participants[m * p_in_m + p],
                         )
-                    )
             else:
                 for _ in range(p_in_m):
-                    matches_info.append(MatchParticipantInfo(match=match, participant_score=0, participant="TBO"))
+                    MatchParticipantInfo.objects.create(match=match, participant_score=0, participant="TBO")
 
             match_serial_number_cnt = match_serial_number_cnt + 1
-
-    Round.objects.bulk_create(rounds)
-    Match.objects.bulk_create(unsaved_matches)
-    MatchParticipantInfo.objects.bulk_create(matches_info)
 
 
 def update_sw_bracket(data):

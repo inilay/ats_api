@@ -14,8 +14,6 @@ from ..models import (
 def create_rr_bracket(bracket: Bracket, participants: list):
     participants_cnt = len(participants)
     rounds = []
-    unsaved_matches = []
-    matches_info = []
 
     # всегда дополняем до четного
     if participants_cnt % 2 == 1:
@@ -31,8 +29,8 @@ def create_rr_bracket(bracket: Bracket, participants: list):
 
     # Создаем раунды
     for number in range(participants_cnt - 1):
-        rounds.append(Round(bracket=bracket, serial_number=number))
-    Round.objects.bulk_create(rounds)
+        round = Round.objects.create(bracket=bracket, serial_number=number)
+        rounds.append(round)
 
     # O(n)
     for i, r in enumerate(rounds):
@@ -42,22 +40,18 @@ def create_rr_bracket(bracket: Bracket, participants: list):
         l2.reverse()
         # O(n/2)
         for j in range(start, mid):
-            match = Match(round=r, serial_number=match_serial_number_cnt, state_id=1)
-            unsaved_matches.append(match)
+            match = Match.objects.create(round=r, serial_number=match_serial_number_cnt, state_id=1)
             if j == 0 and i % 2 == 1:
                 t2 = participants[l1[j]]
                 t1 = participants[l2[j]]
             else:
                 t1 = participants[l1[j]]
                 t2 = participants[l2[j]]
-            matches_info.append(MatchParticipantInfo(match=match, participant_score=0, participant=t1))
-            matches_info.append(MatchParticipantInfo(match=match, participant_score=0, participant=t2))
+            MatchParticipantInfo.objects.create(MatchParticipantInfo(match=match, participant_score=0, participant=t1))
+            MatchParticipantInfo.objects.create(MatchParticipantInfo(match=match, participant_score=0, participant=t2))
             match_serial_number_cnt = match_serial_number_cnt + 1
 
         permutations = permutations[mid:-1] + permutations[:mid] + permutations[-1:]
-
-    Match.objects.bulk_create(unsaved_matches)
-    MatchParticipantInfo.objects.bulk_create(matches_info)
 
 
 def update_rr_bracket(data):

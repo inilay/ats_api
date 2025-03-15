@@ -854,13 +854,13 @@ def create_de_bracket(bracket: Bracket, participants: list):
 
     # Создаем раунды  для нижней сетки, номера нечетные
     for number in range(l_start, -1, -2):
-        rounds_l.append(Round(bracket=bracket, serial_number=number))
+        r = Round.objects.create(bracket=bracket, serial_number=number)
+        rounds_l.append(r)
 
     # Создаем раунды для верхней сетки, номера четные
     for number in range(w_start, -1, -2):
-        rounds_w.append(Round(bracket=bracket, serial_number=number))
-
-    Round.objects.bulk_create(rounds_l + rounds_w)
+        r = Round.objects.create(bracket=bracket, serial_number=number)
+        rounds_w.append(r)
 
     number_of_match_in_round_l = 1
     match_serial_number_cnt = 0
@@ -870,10 +870,9 @@ def create_de_bracket(bracket: Bracket, participants: list):
     for r in range(number_of_rounds_l):
         match_serial_number_cnt = number_of_match_in_round_l
         for _ in range(number_of_match_in_round_l):
-            match = Match(round=rounds_l[r], serial_number=match_serial_number_cnt, state_id=1)
-            unsaved_matches.append(match)
+            match = Match.objects.create(round=rounds_l[r], serial_number=match_serial_number_cnt, state_id=1)
             for _ in range(bracket.participant_in_match):
-                matches_info.append(MatchParticipantInfo(match=match, participant_score=0, participant="---"))
+                MatchParticipantInfo.objects.create(match=match, participant_score=0, participant="---")
             # Уменьшаем серийный номер матча
             match_serial_number_cnt = match_serial_number_cnt - 1
 
@@ -892,22 +891,19 @@ def create_de_bracket(bracket: Bracket, participants: list):
     for r in range(number_of_rounds_w):
         match_serial_number_cnt = number_of_match_in_round_w
         for m in range(number_of_match_in_round_w):
-            match = Match(round=rounds_w[r], serial_number=match_serial_number_cnt, state_id=1)
-            unsaved_matches.append(match)
+            match = Match.objects.create(round=rounds_w[r], serial_number=match_serial_number_cnt, state_id=1)
             # Для первого
             if r == number_of_rounds_w - 1:
                 for p in range(bracket.participant_in_match):
-                    matches_info.append(
-                        MatchParticipantInfo(
+                    MatchParticipantInfo.objects.create(
                             match=match,
                             participant_score=0,
                             participant=participants[m * p_in_m + p],
                         )
-                    )
             # Для остальных
             else:
                 for _ in range(bracket.participant_in_match):
-                    matches_info.append(MatchParticipantInfo(match=match, participant_score=0, participant="---"))
+                    MatchParticipantInfo.objects.create(match=match, participant_score=0, participant="---")
             # Уменьшаем серийный номер матча
             match_serial_number_cnt = match_serial_number_cnt - 1
 
@@ -916,6 +912,3 @@ def create_de_bracket(bracket: Bracket, participants: list):
             number_of_match_in_round_w = number_of_match_in_round_w * 2
         else:
             flag_l = True
-
-    Match.objects.bulk_create(unsaved_matches)
-    MatchParticipantInfo.objects.bulk_create(matches_info)
