@@ -1,10 +1,14 @@
 import math
 import uuid
+from functools import partial
 
+from django.db import transaction
+from django.utils import timezone
 from django.utils.text import slugify
 from rest_framework.exceptions import ValidationError as RestValidationError
 
 from profiles.models import CustomUser
+from tournaments.services.auxiliary_services import create_tournament_notification
 from tournaments.services.de_services import create_de_bracket
 from tournaments.services.rr_services import create_rr_bracket
 from tournaments.services.se_services import create_se_bracket
@@ -27,7 +31,8 @@ def create_bracket(
     tournament: Tournament,
     participant_in_match: int,
     participants: list,
-    advances_to_next: int = 2,
+    shuffle: bool,
+    advances_to_next: int = 1,
     points_loss: int = 0,
     points_draw: int = 0,
     points_victory: int = 0,
@@ -41,7 +46,7 @@ def create_bracket(
     )
 
     if anonymous:
-        participants = clear_participants(participants)
+        participants = clear_participants(participants, shuffle)
         unique_id = uuid.uuid4()
         AnonymousBracket.objects.create(bracket=bracket, link=unique_id)
 
@@ -91,6 +96,7 @@ def create_tournament(
     advance_from_group: int,
     group_type: int,
     private: bool,
+    shuffle: bool,
 ) -> Tournament:
     if private:
         unique_id = uuid.uuid4()
@@ -111,41 +117,39 @@ def create_tournament(
         owner=user.profile,
         type_id=2 if private else 1,
     )
-    participants = clear_participants(participants)
+
+    participants = clear_participants(participants, shuffle)
+
     if tournament_type == 1:
         group_brackets = []
         start = 0
         end = participant_in_group
 
         number_of_group = math.ceil(len(participants) / participant_in_group)
-
-        print("number_of_group", number_of_group)
-
         final_bracket = create_bracket(
             bracket_type,
             tournament,
             participant_in_match,
             ["---" for i in range(number_of_group * advance_from_group)],
+            shuffle,
             advances_to_next,
             points_loss,
             points_draw,
             points_victory,
             number_of_rounds,
         )
-        print("created final")
-
         missing_participants = participant_in_group * number_of_group - len(participants)
 
         for _ in range(missing_participants):
             participants.append("---")
 
-        for i in range(number_of_group):
-            print("group brackets", i)
+        for _ in range(number_of_group):
             bracket = create_bracket(
                 group_type,
                 tournament,
                 participant_in_match,
                 participants[start:end],
+                shuffle,
                 advances_to_next,
                 points_loss,
                 points_draw,
@@ -155,7 +159,6 @@ def create_tournament(
             group_brackets.append(bracket)
             start += participant_in_group
             end += participant_in_group
-        print("created group")
 
         group_settings = GroupBracketSettings.objects.create(
             final_bracket=final_bracket,
@@ -170,6 +173,7 @@ def create_tournament(
             tournament,
             participant_in_match,
             participants,
+            shuffle,
             advances_to_next,
             points_loss,
             points_draw,
@@ -177,5 +181,10 @@ def create_tournament(
             number_of_rounds,
         )
 
-    print("end m")
+    now = timezone.now()
+    minimum_start_time = now + timezone.timedelta(hours=24)
+
+    if start_time < minimum_start_time and start_time > now:
+        transaction.on_commit(partial(create_tournament_notification, tournament=tournament, start_time=start_time))
+
     return

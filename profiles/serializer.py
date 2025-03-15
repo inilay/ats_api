@@ -105,5 +105,9 @@ class CreateSubscriptionSerializer(serializers.Serializer):
     tournament_id = serializers.IntegerField()
 
 
+class CreatePushTokenSerializer(serializers.Serializer):
+    token = serializers.CharField()
+
+
 class DeleteSubscriptionSerializer(serializers.Serializer):
     tournament_id = serializers.IntegerField()

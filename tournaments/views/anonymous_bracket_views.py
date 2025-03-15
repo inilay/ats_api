@@ -18,6 +18,7 @@ from ..utils import inline_serializer
 class AnonymousBracketCreateView(APIView):
     class InputSerializer(serializers.Serializer):
         participants = serializers.CharField()
+        shuffle = serializers.BooleanField(default=False)
         advances_to_next = serializers.IntegerField()
         participant_in_match = serializers.IntegerField()
         bracket_type = serializers.IntegerField()

@@ -4,6 +4,7 @@ from rest_framework_simplejwt.views import (
 )
 
 from .views import (
+    CreatePushTokenAPIView,
     CreateSubscriptionAPIView,
     DeleteSubscriptionAPIView,
     EmailVerify,
@@ -31,5 +32,6 @@ urlpatterns = [
     path("api/v1/get_subscriptions/", GetSubscriptionsAPIView.as_view(), name="subscriptions"),
     path("api/v1/create_subscription/", CreateSubscriptionAPIView.as_view(), name="create_subscription"),
     path("api/v1/delete_subscription/", DeleteSubscriptionAPIView.as_view(), name="delete_subscription"),
+    path("api/v1/create_push_token/", CreatePushTokenAPIView.as_view(), name="create_push_token"),
     path("confirm_email/<uidb64>/<token>/", EmailVerify.as_view(), name="verify_email"),
 ]

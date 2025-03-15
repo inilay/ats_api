@@ -64,6 +64,12 @@ class Tournament(models.Model):
     followers = models.ManyToManyField(Profile, related_name="subscriptions")
 
 
+class TournamentNotification(models.Model):
+    tournament = models.OneToOneField("Tournament", related_name="notification", on_delete=models.CASCADE)
+    task_id = models.CharField(max_length=255)
+    in_queue = models.BooleanField(default=False)
+
+
 class TournamentType(models.Model):
     name = models.CharField(max_length=255)
 

@@ -1,3 +1,4 @@
+import random
 import re
 from typing import Any, Dict, List, Tuple
 
@@ -8,8 +9,11 @@ from django.utils import timezone
 from rest_framework import serializers
 
 
-def clear_participants(participants: list) -> list:
-    return [i.strip() for i in re.split(r"[\n\r]+", participants)]
+def clear_participants(participants: list, shuffle: bool = False) -> list:
+    clear_perticipants = [i.strip() for i in re.split(r"[\n\r]+", participants)]
+    if shuffle:
+        random.shuffle(clear_perticipants)
+    return clear_perticipants
 
 
 def create_serializer_class(name, fields):

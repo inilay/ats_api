@@ -13,12 +13,18 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from profiles.services import create_subscription, create_user, delete_subscription
+from profiles.services import (
+    create_push_token,
+    create_subscription,
+    create_user,
+    delete_subscription,
+)
 from tournaments.models import Tournament
 
 from .models import CustomUser, Profile
 from .permissions import IsProfileOwnerOrReadOnly
 from .serializer import (
+    CreatePushTokenSerializer,
     CreateSubscriptionSerializer,
     DeleteSubscriptionSerializer,
     GetSubscriptionsSerializer,
@@ -188,7 +194,6 @@ class CreateSubscriptionAPIView(APIView):
         if not input_serializer.is_valid():
             return Response(status=status.HTTP_400_BAD_REQUEST)
         create_subscription(input_serializer.validated_data, request.user)
-
         return Response(status=status.HTTP_201_CREATED)
 
 
@@ -203,3 +208,16 @@ class DeleteSubscriptionAPIView(APIView):
         delete_subscription(input_serializer.validated_data, request.user)
 
         return Response(status=status.HTTP_200_OK)
+
+
+class CreatePushTokenAPIView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    @transaction.atomic
+    def post(self, request):
+        input_serializer = CreatePushTokenSerializer(data=request.data)
+        if not input_serializer.is_valid():
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        create_push_token(input_serializer.validated_data, request.user)
+
+        return Response(status=status.HTTP_201_CREATED)

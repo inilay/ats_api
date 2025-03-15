@@ -66,6 +66,7 @@ class TournamentCreateView(APIView):
         title = serializers.CharField()
         content = serializers.CharField(default=None)
         participants = serializers.CharField()
+        shuffle = serializers.BooleanField(default=False)
         poster = serializers.ImageField(use_url=True, default=None)
         game = serializers.CharField()
         start_time = serializers.DateTimeField()

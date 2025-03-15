@@ -1,4 +1,3 @@
-
 import operator
 from functools import reduce
 
@@ -22,7 +21,6 @@ from ..models import (
 
 
 def create_se_bracket(bracket: Bracket, participants: list, settings: SEBracketSettings) -> None:
-    print("se")
     p_cnt = len(participants)
     # p_in_m work from 2 to 8
     p_in_m = bracket.participant_in_match

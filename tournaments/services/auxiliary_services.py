@@ -2,10 +2,23 @@ import math
 
 from django.db.models.query import QuerySet
 
+from tournaments.tasks import celery_send_tournament_notificataion
+
 from ..models import (
     Match,
     MatchParticipantInfo,
+    TournamentNotification,
 )
+
+
+def create_tournament_notification(tournament, start_time):
+    task = celery_send_tournament_notificataion.apply_async(args=(tournament.id,), eta=start_time)
+    TournamentNotification.objects.create(tournament=tournament, task_id=task.id, in_queue=True)
+
+
+def change_tournament_notification(tournament, start_time):
+    task = celery_send_tournament_notificataion.apply_async(args=(tournament.id,), eta=start_time)
+    TournamentNotification.objects.filter(tournament_id=tournament.id).update(task_id=task.id)
 
 
 def set_match_participant_info(match_results: dict, info: QuerySet[MatchParticipantInfo]):
