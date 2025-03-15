@@ -5,7 +5,6 @@ from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.utils.text import slugify
 
-from automatic_tournament_system.celery import app
 from profiles.models import Profile
 from tournaments.services.auxiliary_services import change_tournament_notification
 from tournaments.services.de_services import update_de_bracket
@@ -59,8 +58,8 @@ def update_tournament(*, tournament: Tournament, data) -> Tournament:
         # task.revoke(terminate=True, signal="SIGKILL")
 
         # если в очереди, то отменяем
-        if tournament.notification.in_queue:
-            app.control.revoke(tournament.notification.task_id, terminate=True, signal="SIGKILL")
+        # if tournament.notification.in_queue:
+        #     app.control.revoke(tournament.notification.task_id, terminate=True, signal="SIGKILL")
 
         now = timezone.now()
         minimum_start_time = now + timezone.timedelta(hours=24)
